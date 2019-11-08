@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template
+Globals:
+    Function:
+        Timeout: 5
+Resources:
+    HelloFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            FunctionName: HelloFunction
+            Description: Hello
+            CodeUri: hello/
+            Handler: app.handler
+            Runtime: python3.7
+            # Environment:
+            # Policies:
+            # Events:
